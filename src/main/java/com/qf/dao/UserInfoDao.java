@@ -45,6 +45,5 @@ public class UserInfoDao extends BaseDao{
         return flag;
         //liuchengjin
         //1123456
-//
     }
 }
