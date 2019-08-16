@@ -43,6 +43,7 @@ public class UserInfoDao extends BaseDao{
             session.close();
         }
         return flag;
+        //liuchengjin
 
     }
 }
