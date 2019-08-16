@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--package为实体类包名-->
+<hibernate-mapping package="com.qf.pojo">
+    <class name="Group" table="groupinfo">
+        <id name="groupId" column="groupid">
+            <!--主键生成策略-->
+            <generator class="identity"></generator>
+        </id>
+        <property name="groupName" column="groupname">
+
+        </property>
+        <set name="userInfos">
+            <key column="groupid"></key>
+            <one-to-many class="com.qf.pojo.UserInfo"/>
+        </set>
+    </class>
+</hibernate-mapping>
